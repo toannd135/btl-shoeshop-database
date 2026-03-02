@@ -38,7 +38,7 @@ spec:
               name: {{ include "database-chart.fullname" . }}-secret
               key: dbName        
         ports:
-        - containerPort: 3306
+        - containerPort: {{ .Values.service.port  }}
           name: {{ .Values.service.name  }}
       
         volumeMounts:
