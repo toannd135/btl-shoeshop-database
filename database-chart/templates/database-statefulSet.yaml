@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "database-chart.fullname" . }}
+  labels: {{ include "database-chart.selectorLabels" . | nindent 4 }}
+spec:
+  serviceName: {{ include "database-chart.fullname" . }}
+  replicas: {{ .Values.replicaCount }}
+  selector: 
+    matchLabels: {{ include "database-chart.selectorLabels" . | nindent 6 }}
+  template:
+    metadata: 
+      labels: {{ include "database-chart.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "database-chart.fullname" . }}-secret
+              key: dbRootPassword
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "database-chart.fullname" . }}-secret
+              key: dbUsername
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "database-chart.fullname" . }}-secret
+              key: dbPassword
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef: 
+              name: {{ include "database-chart.fullname" . }}-secret
+              key: dbName        
+        ports:
+        - containerPort: 3306
+          name: {{ .Values.service.name  }}
+      
+        volumeMounts:
+        - name: mysql-data
+          mountPath: /var/lib/mysql
+
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql-data
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      {{- if .Values.persistence.storageClassName }}
+      storageClassName: {{ .Values.persistence.storageClassName | quote }}
+      {{- end }}
+      resources:
+        requests:
+          storage: {{ .Values.persistence.size | quote }}

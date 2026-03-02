@@ -1,0 +1,10 @@
+FROM mysql:8.0
+
+ENV  MYSQL_DATABASE=shoeshop
+ENV MYSQL_ROOT_PASSWORD=123456
+ENV MYSQL_USER=dbshoeshop
+ENV MYSQL_PASSWORD=123456
+
+COPY ./dbdata/* /docker-entrypoint-initdb.d/
+
+EXPOSE 3306

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: cloud-pv
+spec:
+  capacity:
+    storage: 10Gi # Dung lượng ổ đĩa
+  accessModes:
+    - ReadWriteMany # Chỉ 1 Node có thể đọc/ghi tại 1 thời điểm
+  persistentVolumeReclaimPolicy: Delete # Xóa ổ đĩa trên Cloud khi xóa PVC để tiết kiệm $300
+  storageClassName: cloud-storage-class # Phải khớp với StorageClass của PVC
+  gcePersistentDisk:
+    pdName: my-data-disk # Tên ổ đĩa bạn đã tạo thủ công trên Google Cloud Console
+    fsType: ext4

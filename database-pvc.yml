@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: gcp-pvc-demo
+spec:
+  accessModes:
+    - ReadWriteOnce # Chế độ truy cập tiêu chuẩn trên GCP
+  resources:
+    requests:
+      storage: 5Gi # Yêu cầu 5GB từ gói $300
+  storageClassName: cloud-storage # Sử dụng loại đĩa HDD giá rẻ của Google

@@ -1,0 +1,27 @@
+replicaCount: 2
+
+image:
+  repository: toannd135/database-shoeshop
+  pullPolicy: IfNotPresent
+  tag: "v1.1.0"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""  
+resources: {}
+
+
+service:
+  name: shoeshop-mysql
+  type: ClusterIP
+  port: 3306
+
+secrets:
+  username: "root"
+  rootPassword: "123456"
+  database: shoeshop
+  password : "123456"
+
+persistence:
+  size: 1Gi
+  storageClassName: "standard" 

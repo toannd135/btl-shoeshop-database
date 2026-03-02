@@ -1,0 +1,9 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: cloud-storage
+provisioner: pd.csi.storage.gke.io # Provider mặc định của Google Cloud
+parameters:
+  type: pd-standard # Sử dụng ổ HDD để tiết kiệm tiền trong gói $300
+reclaimPolicy: Delete # Khi xóa PVC, ổ đĩa trên Cloud cũng bị xóa để tránh phát sinh phí ngầm
+volumeBindingMode: WaitForFirstConsumer # Chỉ tạo đĩa khi có Pod thực sự chạy
