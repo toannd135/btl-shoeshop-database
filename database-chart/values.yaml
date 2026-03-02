@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository: toannd135/database-shoeshop
+  repository: toannd135/shoeshop-database
   pullPolicy: IfNotPresent
   tag: "v1.1.0"
 
