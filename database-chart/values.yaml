@@ -17,7 +17,7 @@ service:
   port: 3306
 
 secrets:
-  username: "root"
+  username: "dbshoeshop"
   rootPassword: "123456"
   database: shoeshop
   password : "123456"
