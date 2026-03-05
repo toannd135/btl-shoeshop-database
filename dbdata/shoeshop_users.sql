@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `user_id` char(36) NOT NULL,
   `avatar_image` varchar(255) DEFAULT NULL,
-  `created_at` datetime(6) NOT NULL,
+  `created_at` datetime(6) DEFAULT NULL,
   `created_by` varchar(255) NOT NULL,
   `date_of_birth` date DEFAULT NULL,
   `email` varchar(255) NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('68f4d462-5016-4682-910e-5f73f4b65cb7','https://res.cloudinary.com/dunqy8ngo/image/upload/v1771205534/other_vv6od4.png','2026-02-28 15:36:21.246971','68f4d462-5016-4682-910e-5f73f4b65cb7',NULL,'admin@gmail.com','admin',NULL,'admin','$2a$10$CYKOusbU9K2ar9PTjqWNS.OwQLeZqeKp5D7RCnOPS7mPI/epNqf9K','0987654321','SERVER','ACTIVE','2026-02-28 15:36:21.246971',NULL,'admin123','fc5b40dc-73dd-4cbc-84c9-94011f31954e');
+INSERT INTO `users` VALUES ('2808eff5-57b1-44ef-8b3d-789ddb4a9a38','https://lh3.googleusercontent.com/a/ACg8ocLJ8h8qiCCf57X7Fk_GNRz81MfT_uyZvdNYdD2yOlga-bXUBg=s96-c','2026-03-03 02:33:58.745085','2808eff5-57b1-44ef-8b3d-789ddb4a9a38','2026-03-18','hoangvu121995aaaaa@gmail.com','Nguyễn','MALE','Toàn','$2a$10$Dge05/eipC5MmW7n7HrSPOQd3dLj58Dx9bTdDcisMblyFjrBeefyO','0836249957','GOOGLE','DELETED','2026-03-03 07:38:45.873315','2808eff5-57b1-44ef-8b3d-789ddb4a9a38','toann123','b134942f-6c8e-4e47-8344-fa86cf724cf6'),('68f4d462-5016-4682-910e-5f73f4b65cb7','https://res.cloudinary.com/dunqy8ngo/image/upload/v1771205534/other_vv6od4.png','2026-02-28 15:36:21.246971','68f4d462-5016-4682-910e-5f73f4b65cb7',NULL,'admin@gmail.com','admin',NULL,'admin','$2a$10$CYKOusbU9K2ar9PTjqWNS.OwQLeZqeKp5D7RCnOPS7mPI/epNqf9K','0987654321','SERVER','ACTIVE','2026-02-28 15:36:21.246971',NULL,'admin123','fc5b40dc-73dd-4cbc-84c9-94011f31954e'),('7977f0a8-4465-4ff8-9370-87093630ffdb','https://res.cloudinary.com/dunqy8ngo/image/upload/v1771205534/other_vv6od4.png','2026-03-03 02:35:59.417635','7977f0a8-4465-4ff8-9370-87093630ffdb','2026-03-23','luckyn135@gmail.com','Nguyễn','MALE','Toàn','$2a$10$p7mikoiO9oB9z81tcJ0Eh.fjwIqXkPYhJaIKxQ8XeJhBLBEBe.chy','0836249957','SERVER','ACTIVE','2026-03-04 02:39:11.536488','7977f0a8-4465-4ff8-9370-87093630ffdb','lucktn123','53a45ada-f19e-4417-b77d-ac4315247d2d');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -67,4 +67,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-28 22:39:28
+-- Dump completed on 2026-03-05  8:40:43

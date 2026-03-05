@@ -2,8 +2,8 @@ replicaCount: 1
 
 image:
   repository: toannd135/shoeshop-database
-  pullPolicy: IfNotPresent
-  tag: "v1.1.0"
+  pullPolicy: Always
+  tag: "v1.1.1"
 
 imagePullSecrets: []
 nameOverride: ""
