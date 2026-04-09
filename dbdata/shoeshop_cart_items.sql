@@ -41,6 +41,7 @@ CREATE TABLE `cart_items` (
 
 LOCK TABLES `cart_items` WRITE;
 /*!40000 ALTER TABLE `cart_items` DISABLE KEYS */;
+INSERT INTO `cart_items` VALUES ('0b1312dc-b9ab-4e55-8ae2-4ffd93c10354',3,'e8598e7f-cd61-4806-8e5e-4fac5dac2ecb','278d1f5d-1e33-461c-b495-94db95ca2c28'),('497d9d14-6f95-4aa1-8fb0-bfbd39bc9198',1,'1f5d053e-4f31-4200-9271-d74db6588600','278d1f5d-1e33-461c-b495-94db95ca2c28'),('4c5fce21-912b-4346-9450-e1cf2a906354',2,'e8598e7f-cd61-4806-8e5e-4fac5dac2ecb','7921ef2c-2c83-4359-aedc-9af93a2b358e'),('90d74ab3-c626-46f0-b62b-bd7001a80f3f',1,'e8598e7f-cd61-4806-8e5e-4fac5dac2ecb','e0f312cb-c8b5-4a35-847b-cee8efba94f6'),('b7becd84-6139-4843-9ad5-30dc0cec67c5',1,'1f5d053e-4f31-4200-9271-d74db6588600','e6a461e8-0d7d-48fb-857d-c0d18edc3e14'),('c0fc51d3-4a24-4ca2-9d50-3875f7cba691',1,'e8598e7f-cd61-4806-8e5e-4fac5dac2ecb','589b99b8-5bcd-43dd-a149-9f89ce08c5f4');
 /*!40000 ALTER TABLE `cart_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-05  8:40:43
+-- Dump completed on 2026-04-09 22:41:49

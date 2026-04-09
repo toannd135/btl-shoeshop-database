@@ -16,32 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `roles`
+-- Table structure for table `purchase_orders`
 --
 
-DROP TABLE IF EXISTS `roles`;
+DROP TABLE IF EXISTS `purchase_orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `roles` (
-  `role_id` char(36) NOT NULL,
-  `code` varchar(255) NOT NULL,
-  `created_at` datetime(6) NOT NULL,
-  `description` mediumtext,
-  `name` varchar(255) NOT NULL,
-  `status` enum('ACTIVE','DELETED','EXPIRED','INACTIVE','SUSPENDED') NOT NULL,
+CREATE TABLE `purchase_orders` (
+  `po_id` char(36) NOT NULL,
+  `created_at` datetime(6) DEFAULT NULL,
+  `created_by` varchar(36) DEFAULT NULL,
   `updated_at` datetime(6) DEFAULT NULL,
-  PRIMARY KEY (`role_id`)
+  `updated_by` varchar(36) DEFAULT NULL,
+  `expected_delivery_date` datetime(6) DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `status` enum('CANCELLED','CONFIRMED','DELIVERED','PENDING','RETURNED','SHIPPING') NOT NULL,
+  `supplier_id` char(36) NOT NULL,
+  PRIMARY KEY (`po_id`),
+  KEY `FKrpdasmb8y8xs5tiy4369xpinq` (`supplier_id`),
+  CONSTRAINT `FKrpdasmb8y8xs5tiy4369xpinq` FOREIGN KEY (`supplier_id`) REFERENCES `suppliers` (`supplier_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `roles`
+-- Dumping data for table `purchase_orders`
 --
 
-LOCK TABLES `roles` WRITE;
-/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` VALUES ('cb9f704a-3094-4338-8677-eac32d5b5e66','ROLE_SUPER_ADMIN','2026-04-09 14:47:38.254106','','SUPER_ADMIN','ACTIVE','2026-04-09 14:47:38.254106'),('d5c03650-79b9-42dc-bc67-f037500ea17a','ROLE_MANAGER','2026-03-31 08:01:30.841786','Create a product','MANAGER','ACTIVE','2026-04-09 15:08:41.769317'),('db6d5eaa-0dca-4272-8574-7a4cc58f86e7','ROLE_USER','2026-03-12 07:29:14.374627','','USER','ACTIVE','2026-04-09 15:40:39.680747'),('edc8821c-1902-4ba8-bb8c-5825b9bc0c1c','ROLE_ADMIN','2026-04-09 15:06:50.664916','Get all roles; Get a permissions; Update a permission; Delete a permission; Get all users; Get a user; Delete a role; Create a role; Update a role; Create a user; Update a user; Get all permissions; Get a role; Delete a user','ADMIN','ACTIVE','2026-04-09 15:38:08.685177');
-/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
+LOCK TABLES `purchase_orders` WRITE;
+/*!40000 ALTER TABLE `purchase_orders` DISABLE KEYS */;
+/*!40000 ALTER TABLE `purchase_orders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-09 22:41:48
+-- Dump completed on 2026-04-09 22:41:49

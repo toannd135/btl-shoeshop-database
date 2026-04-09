@@ -25,14 +25,13 @@ DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `category_id` char(36) NOT NULL,
   `created_at` datetime(6) DEFAULT NULL,
-  `created_by` binary(16) DEFAULT NULL,
+  `created_by` varchar(36) DEFAULT NULL,
   `status` enum('ACTIVE','DELETED','EXPIRED','INACTIVE','SUSPENDED') NOT NULL,
   `updated_at` datetime(6) DEFAULT NULL,
-  `updated_by` binary(16) DEFAULT NULL,
+  `updated_by` varchar(36) DEFAULT NULL,
   `category_name` varchar(255) NOT NULL,
   `parent_id` char(36) DEFAULT NULL,
   PRIMARY KEY (`category_id`),
-  UNIQUE KEY `UK41g4n0emuvcm3qyf1f6cn43c0` (`category_name`),
   KEY `FKsaok720gsu4u2wrgbk10b5n8d` (`parent_id`),
   CONSTRAINT `FKsaok720gsu4u2wrgbk10b5n8d` FOREIGN KEY (`parent_id`) REFERENCES `categories` (`category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -44,6 +43,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+INSERT INTO `categories` VALUES ('1e26fccd-b403-404b-976f-ba902c7bdf43','2026-04-01 08:11:07.111736','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 08:11:07.111737','d0ecb343-7459-4bdc-bdff-a7edc93622db','Nữ',NULL),('25e367ee-a053-4b15-847e-b8e5a52030e2','2026-04-01 08:51:17.946128','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 08:51:17.946129','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Đá Bóng','da89e504-719c-4586-940e-ce6b046c9b61'),('2aeb5bc1-4444-4f58-8c1c-4fc876d86303','2026-04-01 08:14:11.262548','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 08:14:11.262549','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Chạy Bộ & Đi Bộ','da89e504-719c-4586-940e-ce6b046c9b61'),('31f93c9d-b1a7-47f1-b2dd-8ff24f448b37','2026-04-02 09:23:17.235670','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-02 09:23:17.235671','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Tennis & Pickleball','da89e504-719c-4586-940e-ce6b046c9b61'),('40f761e4-eb06-4f77-8745-843f207a1bfd','2026-03-31 08:02:57.857661','d0ecb343-7459-4bdc-bdff-a7edc93622db','DELETED','2026-04-01 08:12:09.218075','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày da cao cấp','9dc32a83-4d4f-4387-858f-263282681a4d'),('486e14b4-b6ad-4e96-8ebf-130b13a81cfa','2026-04-01 09:37:44.515215','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 09:37:44.515216','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Thể Thao','1e26fccd-b403-404b-976f-ba902c7bdf43'),('51c2cfff-a9b5-421b-901e-7a8da2a389d7','2026-03-29 08:45:40.345928','d0ecb343-7459-4bdc-bdff-a7edc93622db','DELETED','2026-04-01 08:11:51.751128','d0ecb343-7459-4bdc-bdff-a7edc93622db','Bitis',NULL),('5d4a9955-1b85-4aa3-836c-3b17ffe4cde6','2026-04-01 08:11:32.557611','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 08:11:32.557612','d0ecb343-7459-4bdc-bdff-a7edc93622db','Bé Gái',NULL),('5e098e09-547b-484e-8bcc-87c8337e1b52','2026-04-01 08:53:03.341962','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 08:53:03.341964','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Búp Bê','5d4a9955-1b85-4aa3-836c-3b17ffe4cde6'),('6047c8b2-d447-41ff-a73e-83a29452b0f5','2026-04-01 09:33:04.987595','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 09:33:04.987596','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Chạy Bộ & Đi Bộ','1e26fccd-b403-404b-976f-ba902c7bdf43'),('77bbece3-7a82-48e4-8bd7-e28ccddb67b3','2026-04-01 08:13:43.014031','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 08:13:43.014032','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Thể Thao','da89e504-719c-4586-940e-ce6b046c9b61'),('9840f667-49f3-469d-b614-26f652005661','2026-04-01 09:39:08.998606','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 09:39:08.998607','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Thể Thao','5d4a9955-1b85-4aa3-836c-3b17ffe4cde6'),('9da17e19-87bb-40b8-8227-abab8f725f60','2026-04-01 09:35:29.137789','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 09:35:29.137790','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Thể Thao','bb134eb6-339f-42d3-81d2-2043ee3a9687'),('9dc32a83-4d4f-4387-858f-263282681a4d','2026-03-31 08:02:30.310878','d0ecb343-7459-4bdc-bdff-a7edc93622db','DELETED','2026-04-01 08:12:16.531467','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày da',NULL),('af72dbd7-7bc1-45ee-85d0-e70cfb66f946','2026-04-01 08:51:49.920461','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 08:51:49.920463','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Cao Gót','1e26fccd-b403-404b-976f-ba902c7bdf43'),('bb134eb6-339f-42d3-81d2-2043ee3a9687','2026-04-01 08:11:21.703097','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 08:11:21.703098','d0ecb343-7459-4bdc-bdff-a7edc93622db','Bé Trai',NULL),('c3e049a4-6ec9-4279-92d5-ba36ccddab1a','2026-04-01 08:14:27.249179','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 08:14:27.249180','d0ecb343-7459-4bdc-bdff-a7edc93622db','Giày Tây','da89e504-719c-4586-940e-ce6b046c9b61'),('da89e504-719c-4586-940e-ce6b046c9b61','2026-04-01 08:10:21.495732','d0ecb343-7459-4bdc-bdff-a7edc93622db','ACTIVE','2026-04-01 08:10:21.495734','d0ecb343-7459-4bdc-bdff-a7edc93622db','Nam',NULL),('f6d52588-95b9-4787-aee5-38e5cfbd132d','2026-03-29 08:48:57.687475','d0ecb343-7459-4bdc-bdff-a7edc93622db','DELETED','2026-03-31 07:57:50.311629','d0ecb343-7459-4bdc-bdff-a7edc93622db','Bitis Sneaker','51c2cfff-a9b5-421b-901e-7a8da2a389d7');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-05  8:40:43
+-- Dump completed on 2026-04-09 22:41:49
