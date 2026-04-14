@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 8.0.45, for Linux (x86_64)
 --
--- Host: localhost    Database: shoeshop
+-- Host: 13.212.146.205    Database: shoeshop
 -- ------------------------------------------------------
--- Server version	8.0.45-0ubuntu0.24.04.1
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -41,7 +41,7 @@ CREATE TABLE `cart_items` (
 
 LOCK TABLES `cart_items` WRITE;
 /*!40000 ALTER TABLE `cart_items` DISABLE KEYS */;
-INSERT INTO `cart_items` VALUES ('0b1312dc-b9ab-4e55-8ae2-4ffd93c10354',3,'e8598e7f-cd61-4806-8e5e-4fac5dac2ecb','278d1f5d-1e33-461c-b495-94db95ca2c28'),('497d9d14-6f95-4aa1-8fb0-bfbd39bc9198',1,'1f5d053e-4f31-4200-9271-d74db6588600','278d1f5d-1e33-461c-b495-94db95ca2c28'),('4c5fce21-912b-4346-9450-e1cf2a906354',2,'e8598e7f-cd61-4806-8e5e-4fac5dac2ecb','7921ef2c-2c83-4359-aedc-9af93a2b358e'),('90d74ab3-c626-46f0-b62b-bd7001a80f3f',1,'e8598e7f-cd61-4806-8e5e-4fac5dac2ecb','e0f312cb-c8b5-4a35-847b-cee8efba94f6'),('b7becd84-6139-4843-9ad5-30dc0cec67c5',1,'1f5d053e-4f31-4200-9271-d74db6588600','e6a461e8-0d7d-48fb-857d-c0d18edc3e14'),('c0fc51d3-4a24-4ca2-9d50-3875f7cba691',1,'e8598e7f-cd61-4806-8e5e-4fac5dac2ecb','589b99b8-5bcd-43dd-a149-9f89ce08c5f4');
+INSERT INTO `cart_items` VALUES ('14eecb05-045e-456b-8b24-d5c13f64c3f7',1,'487f85c9-fe3b-4893-94cd-74d3478ddd74','d6eb8f24-d77e-4ba1-8c3a-e0e4b5b4b942'),('b0432a00-3fba-4b48-9028-92dab9d862b1',1,'e8598e7f-cd61-4806-8e5e-4fac5dac2ecb','591d3033-005c-46ab-ad4b-514cf1c58e68'),('b286b138-acc2-498c-b0c8-ea369019b1fb',1,'e8598e7f-cd61-4806-8e5e-4fac5dac2ecb','86c59799-1065-4e7c-9e75-77cf52fe280a'),('db989804-18f4-45ee-8024-9cc7dbb1460d',1,'bc27abec-49a7-4159-b464-5967429b6d24','e6a461e8-0d7d-48fb-857d-c0d18edc3e14');
 /*!40000 ALTER TABLE `cart_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-09 22:41:49
+-- Dump completed on 2026-04-14 14:37:57

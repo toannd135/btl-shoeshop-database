@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 8.0.45, for Linux (x86_64)
 --
--- Host: localhost    Database: shoeshop
+-- Host: 13.212.146.205    Database: shoeshop
 -- ------------------------------------------------------
--- Server version	8.0.45-0ubuntu0.24.04.1
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -42,6 +42,7 @@ CREATE TABLE `supplier_variants` (
 
 LOCK TABLES `supplier_variants` WRITE;
 /*!40000 ALTER TABLE `supplier_variants` DISABLE KEYS */;
+INSERT INTO `supplier_variants` VALUES ('06461dd6-f448-4d96-93b5-8dcbee832746',1050000.00,'','9bf8a3c7-b566-4874-9903-03f8ba18d871','278d1f5d-1e33-461c-b495-94db95ca2c28'),('2891b3a7-f64f-408f-a253-1d313ba3f646',2000000.00,NULL,'9bf8a3c7-b566-4874-9903-03f8ba18d871','d6eb8f24-d77e-4ba1-8c3a-e0e4b5b4b942');
 /*!40000 ALTER TABLE `supplier_variants` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-09 22:41:49
+-- Dump completed on 2026-04-14 14:38:02

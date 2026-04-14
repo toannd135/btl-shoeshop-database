@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 8.0.45, for Linux (x86_64)
 --
--- Host: localhost    Database: shoeshop
+-- Host: 13.212.146.205    Database: shoeshop
 -- ------------------------------------------------------
--- Server version	8.0.45-0ubuntu0.24.04.1
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -42,6 +42,7 @@ CREATE TABLE `po_items` (
 
 LOCK TABLES `po_items` WRITE;
 /*!40000 ALTER TABLE `po_items` DISABLE KEYS */;
+INSERT INTO `po_items` VALUES ('738a15df-fdf0-462c-b1dc-8df88fb3fbc4',60,'89cfb27e-f827-4f5f-b795-02b5b50a12d6','06461dd6-f448-4d96-93b5-8dcbee832746'),('c2df05f9-be88-4a7c-b4bc-3afa48ffbfb0',100,'89cfb27e-f827-4f5f-b795-02b5b50a12d6','2891b3a7-f64f-408f-a253-1d313ba3f646');
 /*!40000 ALTER TABLE `po_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-09 22:41:49
+-- Dump completed on 2026-04-14 14:37:55

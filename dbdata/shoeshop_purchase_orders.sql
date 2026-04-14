@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 8.0.45, for Linux (x86_64)
 --
--- Host: localhost    Database: shoeshop
+-- Host: 13.212.146.205    Database: shoeshop
 -- ------------------------------------------------------
--- Server version	8.0.45-0ubuntu0.24.04.1
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -44,6 +44,7 @@ CREATE TABLE `purchase_orders` (
 
 LOCK TABLES `purchase_orders` WRITE;
 /*!40000 ALTER TABLE `purchase_orders` DISABLE KEYS */;
+INSERT INTO `purchase_orders` VALUES ('89cfb27e-f827-4f5f-b795-02b5b50a12d6','2026-04-14 01:15:35.005795','903bb48c-8d51-47e2-883f-c37f4c07964f','2026-04-14 01:15:35.005795','903bb48c-8d51-47e2-883f-c37f4c07964f','2026-04-15 00:00:00.000000','Không có gì','PENDING','9bf8a3c7-b566-4874-9903-03f8ba18d871'),('d3b41f99-8c52-4ccf-ad67-a2233d05baad','2026-04-13 17:09:29.449522','903bb48c-8d51-47e2-883f-c37f4c07964f','2026-04-13 17:09:29.449522','903bb48c-8d51-47e2-883f-c37f4c07964f','2026-04-16 05:05:00.000000',NULL,'PENDING','035c0a3c-a964-4e4a-a5fd-76d2feb5010b'),('e0d3a384-e625-4cb9-99b5-815673fd1ec0','2026-04-14 01:31:27.203209','903bb48c-8d51-47e2-883f-c37f4c07964f','2026-04-14 05:15:09.669880','0bfeafd3-c755-46f0-9861-24138e536aa7','2026-04-16 00:04:00.000000','Không có gì đâu','CONFIRMED','5d46873d-2c1c-4e68-911c-27c3b0b4e054');
 /*!40000 ALTER TABLE `purchase_orders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-09 22:41:49
+-- Dump completed on 2026-04-14 14:38:06

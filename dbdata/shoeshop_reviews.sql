@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 8.0.45, for Linux (x86_64)
 --
--- Host: localhost    Database: shoeshop
+-- Host: 13.212.146.205    Database: shoeshop
 -- ------------------------------------------------------
--- Server version	8.0.45-0ubuntu0.24.04.1
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -43,7 +43,7 @@ CREATE TABLE `reviews` (
 
 LOCK TABLES `reviews` WRITE;
 /*!40000 ALTER TABLE `reviews` DISABLE KEYS */;
-INSERT INTO `reviews` VALUES ('4828c90a-2624-4211-89c5-662d52d0aa0e','2026-04-09 15:54:22.791853','Sản phẩm tuyệt vời',5,'e6a8ac5c-501d-4adb-9c21-ee93586fc69d','278d1f5d-1e33-461c-b495-94db95ca2c28');
+INSERT INTO `reviews` VALUES ('4828c90a-2624-4211-89c5-662d52d0aa0e','2026-04-09 15:54:22.791853','Sản phẩm tuyệt vời',5,'e6a8ac5c-501d-4adb-9c21-ee93586fc69d','278d1f5d-1e33-461c-b495-94db95ca2c28'),('931e1194-ab53-4e21-b8a9-439c37cf52a4','2026-04-14 10:53:32.031814','Sản phẩm bình thường',2,'26472514-5b38-4871-b90f-40c1382a51ac','e6a461e8-0d7d-48fb-857d-c0d18edc3e14'),('952c24ce-35f5-44cd-b077-23065c263801','2026-04-14 12:13:45.969193','quá ok sẽ ủng hộ shop tiếp',4,'adf851ed-9f87-4479-8f12-c538208689ca','278d1f5d-1e33-461c-b495-94db95ca2c28');
 /*!40000 ALTER TABLE `reviews` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-09 22:41:50
+-- Dump completed on 2026-04-14 14:38:12
